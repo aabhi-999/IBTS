@@ -1,0 +1,7 @@
+/opt/homebrew/bin/python3.12 /Users/abhinavmishra/Desktop/IBTSPROJECTWORK2025/main.py
+fastapi==0.111.0
+uvicorn==0.30.0
+sqlalchemy==2.0.30
+pydantic==2.7.1
+
+
