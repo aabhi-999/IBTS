@@ -28,7 +28,9 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/about" element={<About />} />
       </Routes>
-    </Router>
+    </Router> 
+    // start the app with command of npm start
+    
   );
 }
 
