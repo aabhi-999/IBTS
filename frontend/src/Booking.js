@@ -1,11 +1,10 @@
-// src/Booking.js
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Booking = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const bus = location.state?.bus; // ✅ bus details passed from Search.js
+  const bus = location.state?.bus; 
 
   const [passenger, setPassenger] = useState({
     name: "",
@@ -17,12 +16,12 @@ const Booking = () => {
   const [confirmed, setConfirmed] = useState(false);
   const [pnr, setPnr] = useState(null);
 
-  // ✅ Handle input changes
+ 
   const handleChange = (e) => {
     setPassenger({ ...passenger, [e.target.name]: e.target.value });
   };
 
-  // ✅ Handle booking confirm
+ 
   const handleBooking = () => {
     if (
       !passenger.name.trim() ||
@@ -33,8 +32,6 @@ const Booking = () => {
       alert("⚠️ Please fill all details before confirming.");
       return;
     }
-
-    // Generate unique PNR (6-digit alphanumeric)
     const uniquePNR = "PNR" + Math.random().toString(36).substr(2, 6).toUpperCase();
     setPnr(uniquePNR);
 
