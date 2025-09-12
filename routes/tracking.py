@@ -5,8 +5,6 @@ from model import Tracking, Bus
 from datetime import datetime
 
 router = APIRouter()
-
-# Update bus location (Driver/Conductor app will call this API)
 @router.post("/update/")
 def update_location(bus_id: int, latitude: float, longitude: float, db: Session = Depends(get_db)):
     bus = db.query(Bus).filter(Bus.id == bus_id).first()
@@ -18,8 +16,6 @@ def update_location(bus_id: int, latitude: float, longitude: float, db: Session 
     db.commit()
     db.refresh(location)
     return {"message": "Location updated", "bus_id": bus_id}
-
-# Get latest location of a bus
 @router.get("/{bus_id}")
 def get_location(bus_id: int, db: Session = Depends(get_db)):
     location = db.query(Tracking).filter(Tracking.bus_id == bus_id).order_by(Tracking.timestamp.desc()).first()
