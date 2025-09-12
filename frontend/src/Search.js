@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import navigation hook
+import { useNavigate } from "react-router-dom"; 
 import buses from "./buses";
 
 function Search() {
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
   const [results, setResults] = useState([]);
-  const navigate = useNavigate(); // ✅ Initialize navigation
-
+  const navigate = useNavigate(); 
   const handleSearch = () => {
     const filtered = buses.filter(
       (bus) =>
@@ -18,7 +17,6 @@ function Search() {
   };
 
   const handleBooking = (bus) => {
-    // Navigate to Booking page & pass selected bus details
     navigate("/booking", { state: { bus } });
   };
 
