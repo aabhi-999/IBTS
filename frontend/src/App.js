@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MyBookings from "./MyBookings"; 
-// Import components from separate files
 import Home from "./Home";
 import Search from "./Search";
 import Booking from "./Booking";
@@ -29,7 +28,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
     </Router> 
-    // start the app with command of npm start
+    //  for the user who will clone this repo start the app with command of " npm start " --->>Abhinav
     
   );
 }
