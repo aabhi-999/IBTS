@@ -1,4 +1,0 @@
-# Required packages for gesture detection project
-opencv-python
-numpy
-PyYAML
