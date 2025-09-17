@@ -28,7 +28,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
     </Router> 
-    //  for the user who will clone this repo start the app with command of " npm start " --->>Abhinav
+    //  for the user who will clone this repo start the app with command of " npm start " --->>Abhinav(my self)
     
   );
 }
