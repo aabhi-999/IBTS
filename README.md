@@ -1,6 +1,6 @@
 Intelligent Bus Transport System: A DigitalSolution for Maximising Public Transport in UttarPradesh
 
-Abstract: 
+Abstract:  
   
 Public transport in India, and specifically state roadways bus services, is plagued by problems of non-real-time tracking of buses, inefficient route optimization, and lack of integrated digital ticketing solutions. In this article, an Intelligent Bus Transport System (ITBS) is suggested that resolves these problems through an integrated web and mobile-based platform. ITBS allows passengers to trace buses in real-time, view fare and route details, and purchase tickets online—akin to the IRCTC model for trains. The system utilizes GPS-based tracking, cloud-based databases, and secure payment gateways to transform bus transportation services, with a view to enhancing operational efficiency, passenger satisfaction, and collection of revenues. Keywords: Public Transport, Intelligent Transportation System, GPS Tracking, Digital Ticketing, Bus Management System.
 
