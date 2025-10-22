@@ -11,7 +11,7 @@ function App() {
     <Router>
       {/* Navbar */}
       <nav className="flex justify-between items-center bg-blue-600 px-6 py-3 text-white">
-        <div className="text-xl font-bold">IBTS 🚍</div>
+        <div className="text-xl font-bold">IBTS 🚍</div>   
         <div className="space-x-6">
           <Link to="/" className="hover:underline">Home</Link>
           <Link to="/search" className="hover:underline">Search</Link>
