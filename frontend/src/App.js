@@ -4,7 +4,7 @@ import MyBookings from "./MyBookings";
 import Home from "./Home";
 import Search from "./Search";
 import Booking from "./Booking";    
-import About from "./About";
+import About from "./About";  
   
 function App() {
   return (
