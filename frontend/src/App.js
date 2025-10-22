@@ -7,7 +7,7 @@ import Booking from "./Booking";
 import About from "./About";   
      
 function App() {
-  return (    
+  return (      
     <Router>
       {/* Navbar */}
       <nav className="flex justify-between items-center bg-blue-600 px-6 py-3 text-white">
