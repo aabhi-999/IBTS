@@ -1,0 +1,48 @@
+# ----------------------------------------------------------------------
+# Build Artifacts and Local Development
+# ----------------------------------------------------------------------
+/build
+/dist
+/out
+/public
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.log
+
+# ----------------------------------------------------------------------
+# Dependencies
+# ----------------------------------------------------------------------
+# Node modules
+/node_modules
+
+# pnpm-store directory
+.pnpm-store
+
+# Dependency lock files (keep only one, based on what you use)
+package-lock.json  # If you use npm
+# yarn.lock        # If you use yarn (uncomment if you use yarn)
+# pnpm-lock.yaml   # If you use pnpm
+
+# ----------------------------------------------------------------------
+# Firebase and Environment Files
+# ----------------------------------------------------------------------
+# Firebase CLI login token (SECURITY RISK if committed!)
+.firebase/
+.firebaserc # Recommended to keep if it lists project aliases, but often excluded for clean setup
+
+# Environment Variables/Secrets (CRITICAL to ignore)
+.env
+.env.local
+.env.*.local
+.local
+
+# ----------------------------------------------------------------------
+# OS and Editor Specific Files
+# ----------------------------------------------------------------------
+.DS_Store       # macOS
+Thumbs.db       # Windows
+.vscode/        # VSCode settings (Optional, remove if you want to share settings)
+*.swp           # Vim swap files

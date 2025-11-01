@@ -1,0 +1,5 @@
+# Docker Compose configuration for KisanSetu
+version: '3.8'
+
+services:
+  # Add your services here

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kisan Setu - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-green: #2E7D32;
+      --secondary-orange: #F57C00;
+      --accent-yellow: #FDD835;
+      --light-green-bg: #D5E1D2;
+      --dark-green: #1B5E20;
+      --text-dark: #212121;
+      --muted: #616161;
+      --white: #FFFFFF;
+      --border: #E0E0E0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: var(--light-green-bg);
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: var(--white);
+      width: 360px;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .language-selector {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .language-selector select {
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--primary-green);
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.2rem;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .welcome-main {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      letter-spacing: 1px;
+      margin-bottom: 0.3rem;
+    }
+
+    .welcome {
+      color: var(--secondary-orange);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      color: var(--primary-green);
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--primary-green);
+      box-shadow: 0 0 5px rgba(46,125,50,0.3);
+    }
+
+    .show-pass {
+      position: absolute;
+      right: 10px;
+      top: 35px;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .remember {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .remember label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .login-btn {
+      width: 100%;
+      background-color: var(--primary-green);
+      color: var(--white);
+      padding: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: var(--dark-green);
+    }
+
+    .links {
+      margin-top: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 0.3rem 0;
+      color: var(--secondary-orange);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .links a:hover {
+      color: var(--accent-yellow);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 400px) {
+      .login-container {
+        width: 90%;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="language-selector">
+      <select id="language" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
+
+    <img src="src/assets/images/Kisansetu.png" alt="Kisan Setu Logo" class="logo">
+
+    <div class="welcome-main" id="welcome-main">WELCOME</div>
+    <div class="welcome" id="tagline">AI-Powered Agricultural Intelligence Platform</div>
+
+    <h2 id="login-title">KISAN SETU LOGIN</h2>
+
+    <div class="input-group">
+      <label for="username" id="username-label">Username</label>
+      <input type="text" id="username" placeholder="Enter your username">
+    </div>
+
+    <div class="input-group">
+      <label for="password" id="password-label">Password</label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <i class="fa-solid fa-eye show-pass" id="togglePass" onclick="togglePassword()"></i>
+    </div>
+
+    <div class="remember">
+      <label><input type="checkbox" id="remember"> <span id="remember-text">Remember Me</span></label>
+    </div>
+
+    <button type="button" class="login-btn" id="login-btn" onclick="handleLogin()">Login</button>
+
+    <div class="links">
+      <a href="#" id="forgot-link">Forgot Password?</a><br>
+      <a href="#" id="create-link">Create New Account</a>
+    </div>
+
+    <footer id="footer-text">© 2025 Kisan Setu | Empowering Farmers</footer>
+  </div>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("language").value;
+      const text = {
+        en: {
+          welcome: "WELCOME",
+          tagline: "AI-Powered Agricultural Intelligence Platform",
+          login: "KISAN SETU LOGIN",
+          username: "Username",
+          password: "Password",
+          remember: "Remember Me",
+          loginBtn: "Login",
+          forgot: "Forgot Password?",
+          create: "Create New Account",
+          footer: "© 2025 Kisan Setu | Empowering Farmers"
+        },
+        hi: {
+          welcome: "स्वागत है",
+          tagline: "एआई संचालित कृषि बुद्धिमत्ता मंच",
+          login: "किसान सेतु लॉगिन",
+          username: "उपयोगकर्ता नाम",
+          password: "पासवर्ड",
+          remember: "मुझे याद रखें",
+          loginBtn: "लॉगिन करें",
+          forgot: "पासवर्ड भूल गए?",
+          create: "नया खाता बनाएं",
+          footer: "© 2025 किसान सेतु | किसानों को सशक्त बनाना"
+        }
+      };
+      const t = text[lang];
+      document.getElementById("welcome-main").innerText = t.welcome;
+      document.getElementById("tagline").innerText = t.tagline;
+      document.getElementById("login-title").innerText = t.login;
+      document.getElementById("username-label").innerText = t.username;
+      document.getElementById("password-label").innerText = t.password;
+      document.getElementById("remember-text").innerText = t.remember;
+      document.getElementById("login-btn").innerText = t.loginBtn;
+      document.getElementById("forgot-link").innerText = t.forgot;
+      document.getElementById("create-link").innerText = t.create;
+      document.getElementById("footer-text").innerText = t.footer;
+    }
+
+    function togglePassword() {
+      const pass = document.getElementById("password");
+      const icon = document.getElementById("togglePass");
+      if (pass.type === "password") {
+        pass.type = "text";
+        icon.classList.replace("fa-eye", "fa-eye-slash");
+      } else {
+        pass.type = "password";
+        icon.classList.replace("fa-eye-slash", "fa-eye");
+      }
+    }
+
+    function handleLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      
+      if (!username || !password) {
+        alert('Please enter both username and password');
+        return;
+      }
+      
+      // Simple validation for demo
+      if (username === 'admin' && password === 'password') {
+        alert('Login successful!');
+        localStorage.setItem('username', username);
+        // Redirect to dashboard
+        window.location.href = 'src/pages/FarmerDashboard.jsx';
+      } else {
+        alert('Invalid credentials. Try admin/password');
+      }
+    }
+
+    // Handle Enter key
+    document.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        handleLogin();
+      }
+    });
+  </script>
+</body>
+</html>
