@@ -8,7 +8,7 @@ function About() {
         The <strong>Intelligent Bus Transportation System (IBTS)</strong> is a 
         smart platform designed to modernize government bus services.
         <br />
-        <br />
+        <br /> 
         With IBTS, passengers can:
       </p>
       <ul className="list-disc list-inside mt-3 text-gray-700 text-left">
