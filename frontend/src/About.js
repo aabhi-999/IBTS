@@ -1,6 +1,6 @@
 import React from "react";
 
-function About() {
+function About() { 
   return (
     <div className="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
       <h1 className="text-2xl font-bold text-blue-600 mb-4">ℹ️ About IBTS</h1>
