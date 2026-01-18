@@ -6,7 +6,7 @@ import Search from "./Search";
 import Booking from "./Booking";
 import About from "./About";
  
-function App() {
+function App() { 
   return (
     <Router>
       {/* Navbar */}
