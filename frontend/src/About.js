@@ -6,7 +6,7 @@ function About() {
       <h1 className="text-2xl font-bold text-blue-600 mb-4">ℹ️ About IBTS</h1>
       <p className="text-gray-700 leading-relaxed"> 
         The <strong>Intelligent Bus Transportation System (IBTS)</strong> is a  
-        smart platform designed to modernize government bus services. 
+        smart platform designed to modernize government bus services.  
         <br />
         <br /> 
         With IBTS, passengers can:
